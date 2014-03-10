@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @microposdt.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @microposdt.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_microposdt_path(@microposdt) %> |
+<%= link_to 'Back', microposdts_path %>

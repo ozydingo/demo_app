@@ -1,0 +1,29 @@
+<h1>Listing microposdts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @microposdts.each do |microposdt| %>
+      <tr>
+        <td><%= microposdt.content %></td>
+        <td><%= microposdt.user_id %></td>
+        <td><%= link_to 'Show', microposdt %></td>
+        <td><%= link_to 'Edit', edit_microposdt_path(microposdt) %></td>
+        <td><%= link_to 'Destroy', microposdt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Microposdt', new_microposdt_path %>
